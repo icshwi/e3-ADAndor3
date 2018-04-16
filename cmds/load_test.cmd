@@ -1,4 +1,8 @@
 
-dlload /home/jhlee/e3/tools/e3-ADAndor3/ADAndor3/andor3Support/os/linux-x86_64/libatcore.so
+
+epicsEnvSet("TOP",${PWD})
+
+< ${TOP}/cmds/load_libs.cmd
+
 
 require ADAndor3,2.2.0
