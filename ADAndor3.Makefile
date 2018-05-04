@@ -30,7 +30,8 @@ where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 include $(E3_REQUIRE_TOOLS)/driver.makefile
 
-SUPPORT:=andor3Support
+# Exclude linux-ppc64e6500
+EXCLUDE_ARCHS = linux-ppc64e6500
 
 ifneq ($(strip $(ASYN_DEP_VERSION)),)
 asyn_VERSION=$(ASYN_DEP_VERSION)
@@ -40,6 +41,8 @@ ifneq ($(strip $(ADCORE_DEP_VERSION)),)
 ADCore_VERSION=$(ADCORE_DEP_VERSION)
 endif
 
+
+SUPPORT:=andor3Support
 
 APP:=andor3App
 APPDB:=$(APP)/Db
