@@ -32,6 +32,15 @@ include $(E3_REQUIRE_TOOLS)/driver.makefile
 
 SUPPORT:=andor3Support
 
+ifneq ($(strip $(ASYN_DEP_VERSION)),)
+asyn_VERSION=$(ASYN_DEP_VERSION)
+endif
+
+ifneq ($(strip $(ADCORE_DEP_VERSION)),)
+ADCore_VERSION=$(ADCORE_DEP_VERSION)
+endif
+
+
 APP:=andor3App
 APPDB:=$(APP)/Db
 APPSRC:=$(APP)/src
