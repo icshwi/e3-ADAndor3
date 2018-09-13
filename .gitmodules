@@ -1,4 +1,4 @@
 [submodule "ADAndor3"]
 	path = ADAndor3
 	url = https://github.com/areaDetector/ADAndor3
-	ignore = all
+	ignore = dirty
