@@ -17,7 +17,7 @@
 #
 # Author  : Jeong Han Lee
 # email   : jeonghan.lee@gmail.com
-# Date    : Thursday, May 17 17:36:32 CEST 2018
+# Date    : September 29 14:19:15 CEST 2018
 # version : 0.0.1
 
 
@@ -64,10 +64,10 @@ DBDS    += $(APPSRC)/andor3Support.dbd
 
 
 ifeq ($(T_A),linux-x86_64)
-USR_LDFLAGS += -Wl,--enable-new-dtags
-USR_LDFLAGS += -Wl,-rpath=$(E3_MODULES_VENDOR_LIBS_LOCATION)
-USR_LDFLAGS += -L$(E3_MODULES_VENDOR_LIBS_LOCATION)
-USR_LDFLAGS += -latcore
+USR_LDFLAGS  += -Wl,--enable-new-dtags
+USR_LDFLAGS  += -Wl,-rpath=$(E3_MODULES_VENDOR_LIBS_LOCATION)
+USR_LDFLAGS  += -L$(E3_MODULES_VENDOR_LIBS_LOCATION)
+LIB_SYS_LIBS += atcore
 endif
 
 
