@@ -1,7 +1,6 @@
-# what_ever_filename.p0.patch
+# 2.2.0-include-stdlin.h.p0.patch
 
-Generic Description.....
+stlib.h is missing, unable to compile in Ubuntu 14.04
 
 * created by Jeong Han Lee, han.lee@esss.se
-* related URL or reference https://github.com/icshwi
-* Tuesday, February 13 13:24:57 CET 2018
+* Sunday, September 30 21:17:14 CEST 2018

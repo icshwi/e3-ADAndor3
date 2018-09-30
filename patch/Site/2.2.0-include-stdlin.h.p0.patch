@@ -1,0 +1,12 @@
+diff --git andor3App/src/andor3.cpp andor3App/src/andor3.cpp
+index 45a5732..fa3c71d 100644
+--- andor3App/src/andor3.cpp
++++ andor3App/src/andor3.cpp
+@@ -26,6 +26,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <wchar.h>
+ 
