@@ -1,5 +1,6 @@
 #
-#  Copyright (c) 2017 - Present  European Spallation Source ERIC
+#  Copyright (c) 2019            Jeong Han Lee
+#  Copyright (c) 2017 - 2019     European Spallation Source ERIC
 #
 #  The program is free software: you can redistribute
 #  it and/or modify it under the terms of the GNU General Public License
@@ -17,8 +18,8 @@
 #
 # Author  : Jeong Han Lee
 # email   : jeonghan.lee@gmail.com
-# Date    : September 29 14:19:15 CEST 2018
-# version : 0.0.1
+# Date    : Thursday, March 28 22:39:09 CET 2019
+# version : 0.0.2
 
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
@@ -36,8 +37,7 @@ endif
 
 # Exclude linux-ppc64e6500
 EXCLUDE_ARCHS = linux-ppc64e6500
-
-
+EXCLUDE_ARCHS += linux-corei7-poky
 
 
 
@@ -49,10 +49,19 @@ APPSRC:=$(APP)/src
 
 
 ## We will use XML2 as the system lib, instead of ADSupport
-## Do we need to load libxml2 when we start iocsh?
+## Can we use this on this?
+## In case, I added the following lines.
 
+
+ifeq ($(T_A),linux-ppc64e6500)
+USR_INCLUDES += -I$(SDKTARGETSYSROOT)/usr/include/libxml2
+else ifeq ($(T_A),linux-corei7-poky)
+USR_INCLUDES += -I$(SDKTARGETSYSROOT)/usr/include/libxml2
+else
 USR_INCLUDES += -I/usr/include/libxml2
-LIB_SYS_LIBS += xml2	
+endif
+
+LIB_SYS_LIBS += xml2
 
 
 HEADERS += $(SUPPORT)/atcore.h
