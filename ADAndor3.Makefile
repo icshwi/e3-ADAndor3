@@ -80,7 +80,7 @@ LIB_SYS_LIBS += atcore
 endif
 
 
-VENDOR_LIBS += $(SUPPORT)/os/linux-x86_64/libatcore.so.3.10.30003.5
+VENDOR_LIBS += $(SUPPORT)/os/linux-x86_64/libatcore.so.3.13.30034.0
 VENDOR_LIBS += $(SUPPORT)/os/linux-x86_64/libatcore.so.3
 VENDOR_LIBS += $(SUPPORT)/os/linux-x86_64/libatcore.so
 
