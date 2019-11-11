@@ -1,0 +1,10 @@
+digraph ADAndor3 {
+node [shape=record];
+base [label="base 7.0.3.1"]
+require [label="require 3.1.2"]
+ADCORE [label="ADCORE 3.7.0"]
+ASYN [label="ASYN 4.36.0"]
+ADAndor3 [label="ADAndor3 efba947"]
+base -> require -> { ADCORE,ASYN } ->  {  ADAndor3  } 
+} 
+
